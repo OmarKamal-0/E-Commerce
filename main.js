@@ -85,8 +85,8 @@ function Fetch(){
                         <i onclick="color_heart()" class="fa-solid fa-share"></i>
                     </div>
                     <div class="products-img mt-0">
-                        <img src="${products.img}" loading="lazy">
-                        <img class="img-hover" src="${products.img_hover}" loading="lazy">
+                        <img src="product1.jpg" loading="lazy">
+                        <img class="img-hover" src="product-1.jpg" loading="lazy">
                     </div>
                     <div class="products-name">
                         <a href="only_product.html"><h6>${products.name}</h6></a>
@@ -114,8 +114,8 @@ function Fetch(){
                         <i onclick="color_heart()" class="fa-solid fa-share"></i>
                     </div>
                     <div class="products-img mt-0">
-                        <img src="${products.img}" loading="lazy">
-                        <img class="img-hover" src="${products.img_hover}" loading="lazy">
+                        <img src="product2.jpg" loading="lazy">
+                        <img class="img-hover" src="product-2.jpg" loading="lazy">
                     </div>
                     <div class="products-name">
                         <a href="only_product.html"><h6>${products.name}</h6></a>
@@ -139,8 +139,8 @@ function Fetch(){
                         <i onclick="color_heart()" class="fa-solid fa-share"></i>
                     </div>
                     <div class="products-img mt-0">
-                        <img src="${products.img}" loading="lazy">
-                        <img class="img-hover" src="${products.img_hover}" loading="lazy">
+                        <img src="product3.jpg" loading="lazy">
+                        <img class="img-hover" src="product-3.jpg" loading="lazy">
                     </div>
                     <div class="products-name">
                         <a href="only_product.html"><h6>${products.name}</h6></a>
@@ -178,8 +178,8 @@ function All_Fetch(){
                     <i onclick="color_heart()" class="fa-solid fa-share"></i>
                 </div>
                 <div class="products-img mt-0">
-                    <img src="${products.img}" loading="lazy">
-                    <img class="img-hover" src="${products.img_hover}" loading="lazy">
+                    <img src="product4.jpg" loading="lazy">
+                    <img class="img-hover" src="product-4.jpg" loading="lazy">
                 </div>
                 <div class="products-name">
                     <a href="only_product.html"><h6>${products.name}</h6></a>
