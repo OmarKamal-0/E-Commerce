@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Product</title>
+    <link rel="icon" href="icon_email.png">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Css -->
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <nav id="Home">
+            <div style="position: relative;" class="navbar bg-body-tertiary">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="logo-black.png">
+                    </a>
+                    <div class="cart d-flex" style="align-items: center;">
+                        <p class="num-pay">0</p>
+                        <i class="fa-solid fa-lock me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header mb-0">
+                            <h5 class="offcanvas-title mt-3" id="offcanvasRightLabel">My Card</h5>
+                            <p class="mt-3 mb-0 ms-1">( <span class="num-pay2">0</span> Product In Card )</p>
+                            <button type="button" class="btn-close mb-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div><hr>
+                        <div class="offcanvas-body">
+                        </div>
+                        <div class="offcanvas-footer"><hr>
+                            <div class="d-flex justify-content-between">
+                                <p class="ms-3">Car Subtotal</p>
+                                <p class="p-card me-3">$0</p>
+                            </div>
+                            <button class="btn-card ms-3 mb-2">PROCEED TO CHECKOUT</button>
+                            <button class="btn-card2 ms-3 mb-2" data-bs-dismiss="offcanvas" aria-label="Close">
+                                SHOP MORE
+                            </button>
+                        </div>
+                        </div>
+                        <div>
+                            <h6 class="mb-0">My Cart</h6>
+                            <p class="mt-0 p-card2 mb-0">$0.00</p>
+                        </div>
+                    </div>
+                    <div style="border-bottom: 4px solid rgb(238, 238, 238);" class="container search-1 mt-2"></div>
+                    <div class="navbar nav-underline navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link me-3" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link me-3" href="Products.html">ALL PRODUCT</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link me-3 active" href="#Home">
+                                        MY PRODUCT
+                                    </a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link me-3" href="#About">
+                                        ABOUT US
+                                    </a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link me-3" href="#About">
+                                        CONTACT
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div>
+                            <button type="button" class="btn-sign" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Login
+                            </button>
+                            <div class="modal fade mt-5" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="width: 80%; margin-left: 10%;">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form onsubmit="return validate()" action="index.html">
+                                            <div class="modal-body">
+                                                <label for="Enter Email">Enter Email</label>
+                                                <input type="text" class="email" name="email" placeholder="Enter Your Email" value="" id="Enter Email">
+                                                <p class="Error-1 mb-0">Incorrect Email</p>
+                                                <label for="Enter Password">Enter Password</label>
+                                                <input type="password" class="password" name="Password" placeholder="Enter Your Password" value="" id="Enter Password">
+                                                <p class="Error-2 mb-0">Incorrect Password</p>
+                                                <input type="checkbox" class="checkbox mt-3" name="checkbox" id="Remember Me">
+                                                <label class="label" for="Remember Me">Remember Me</label>
+                                            </div>
+                                            <div style="justify-content: center;" class="modal-footer d-flex">
+                                                <button type="button" class="btn-sign" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                                    Sign Up
+                                                </button>
+                                                <button type="submit" class="btn-sign" data-bs-target="#staticBackdrop">
+                                                    Sign In
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="button" class="btn-sign ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                Sign Up
+                            </button>
+                            <div class="modal fade mt-5" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="width: 80%; margin-left: 10%;">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel1">Sign Up</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <form onsubmit="return validate_Sign_Up()" action="index.html">
+                                            <div class="modal-body">
+                                                <label for="Full Name">Full Name</label>
+                                                <input type="text" class="Full_Name" name="Full Name" placeholder="Enter Full Name" value="" id="Enter Full Name">
+                                                <p class="error-0 mb-0">Enter Full Name</p>
+                                                <label for="Enter Email">Enter Email</label>
+                                                <input type="text" class="Email" name="Email" placeholder="Enter Your Email" value="" id="Enter Your Email">
+                                                <p class="error-1 mb-0">Enter Email</p>
+                                                <label for="Enter Password">Enter Password</label>
+                                                <input type="password" class="Password" name="Password" placeholder="Enter Your Password" value="" id="Enter Your Password">
+                                                <p class="error-2 mb-0">Enter Password</p>
+                                            </div>
+                                            <div style="justify-content: center;" class="modal-footer d-flex">
+                                                <button type="button" class="btn-sign" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                    Sign In
+                                                </button>
+                                                <button type="submit" class="btn-sign" data-bs-target="#staticBackdrop1">
+                                                    Sign Up
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="sect-1 mt-4 mb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="view-product mb-5 mt-3 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div><img class="Big_Img" src="product1.jpg" loading="lazy"></div>
+                        <div class="d-flex mt-4" style="justify-content: space-between; gap: 10px;">
+                            <img onclick="Swap(this.src)" width="80px" height="80px" src="product1.jpg" loading="lazy">
+                            <img onclick="Swap(this.src)" width="80px" height="80px" src="product2.jpg" loading="lazy">
+                            <img onclick="Swap(this.src)" width="80px" height="80px" src="product-2.jpg" loading="lazy">
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: start;" class="view-product mb-5 mt-4 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h5>Lorem ipsum dolor, sit amet consectetur adipisicing.</h5>
+                        <div class="products-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i style="color: black;" class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="products-price d-flex justify-content-center mt-2">
+                            <span class="price me-3">$100.00</span>
+                            <p class="old-price">$200.00</p>
+                        </div>
+                        <h6>Avaailabaleility : <span>In Stock</span></h6>
+                        <h6>SKU : <span>Samsung Galaxy Z-Fold</span></h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quasi ipsa doloribus aut mollitia, asperiores nihil. Eos consequatur excepturi nesciunt molestiae provident, ea similique numquam quisquam, distinctio eaque reiciendis qui.</p>
+                        <h4>Hurry Up! Only 98 Product Left In Stock</h4>
+                        <button class="mt-3">Add TO Card <i class="fa-solid fa-cart-shopping"></i></button>
+                        <div class="icons mt-3">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-sharp fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sect-2">
+            <div style="background-color: white; padding: 20px 0px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-flex col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                            <div>
+                                <img class="me-2" width="80px" height="80px" src="icon_email.png" loading="lazy">
+                            </div>
+                            <div>
+                                <h4 class="mb-0">Sign Up To Newsletter</h4>
+                                <p class="mb-0">Get Email Update About Our Latest Shop...and Receive</p>
+                                <h6 class="mt-0">$30 Coupon For First Shopping</h6>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                            <form class="d-flex mt-4 m-auto" role="search">
+                                <input style="border: 3px solid rgb(235, 184, 0);" class="form-control inp3" placeholder="Search For Product" type="search" aria-label="Search">
+                                <button class="btn btn3 btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="About">
+            <div style="background-color: rgb(50, 50, 50); padding: 30px 0px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <a class="nav-link" href="#Home">
+                                <img src="logo-white.png" loading="lazy">
+                            </a>
+                            <div class="d-flex mt-3">
+                                <img width="50px" class="me-2" height="50px" src="6f44664b05ec4fd39f059636446f9923.svg" loading="lazy">
+                                <div>
+                                    <h6>Hotline Free 24/24:</h6>
+                                    <h5 style="color: rgb(235, 184, 0);">(+100) 123 456 789</h5>
+                                </div>
+                            </div>
+                            <p class="mb-0">Lorem ipsum dolor sit ame</p>
+                            <p>container.</p>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <h4>FAQs & Help</h4>
+                            <p>F.A.Q`S</p>
+                            <p>Ordering Tracking</p>
+                            <p>Contacts</p>
+                            <p>Events</p>
+                            <p>Help Center</p>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <h4>Shipping & Delivery</h4>
+                            <p>Delivery Information</p>
+                            <p>Discount</p>
+                            <p>Payment & Shipping</p>
+                            <p>Delivery Time</p>
+                            <p>Shipping Guide</p>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <h4>Information</h4>
+                            <p>Popular</p>
+                            <p>Our Services</p>
+                            <p>Your Account</p>
+                            <p>Privacy Policy</p>
+                            <p>Terms & Conditions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <!-- JS -->
+    <script src="main.js"></script>
+</body>
+</html>
